@@ -30,14 +30,14 @@ pipeline {
         stage('Create image') {
             steps {
                 echo 'creating image...'
-                sh 'docker build -t kubemazl/myinsapp -f Dockerfile .'
+                sh 'docker build -t kubemazl/myinsapp:v1 -f Dockerfile .'
             }
         } 
         stage('Publish image') {
             steps {
                 echo 'pushing image..'
                 withDockerRegistry([ credentialsId: "docker-hub-credentials", url: "" ]) {
-                    sh 'docker push kubemazl/myinsapp'
+                    sh 'docker push kubemazl/myinsapp:v1'
                 }
                
             }
