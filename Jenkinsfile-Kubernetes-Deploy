@@ -10,7 +10,7 @@ pipeline {
         stage('Exexuting kubectl') {
             steps {
                 echo 'Exexuting kubectl'
-                withKubeConfig([credentialsId: 'az-kube-credentials']) {
+                withKubeConfig([credentialsId: 'k8-credentials']) {
                     sh 'kubectl apply -f kubernetes/1_ins_app_deployment.yaml'
                     sh 'kubectl apply -f kubernetes/2_ins_app_service.yaml'
                 }
