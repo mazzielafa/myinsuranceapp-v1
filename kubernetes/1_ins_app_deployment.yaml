@@ -1,0 +1,23 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myinsapp-deployment
+  labels:
+    app: myinsapp
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: myinsapp
+  template:
+    metadata:
+      labels:
+        app: myinsapp
+    spec:
+      containers:
+      - name: myinsapp
+        image: kubemazl/myinsapp:v1
+        ports:
+        - name: http
+          containerPort: 5000
