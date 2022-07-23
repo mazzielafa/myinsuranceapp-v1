@@ -1,0 +1,5 @@
+resources:
+  - 1_ins_app_deployment.yaml
+  - 2_ins_app_service.yaml
+  - 3_ins_app_deployment_az.yaml
+  - 4_ins_app_service_az.yaml
