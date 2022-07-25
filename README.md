@@ -1,5 +1,7 @@
 # My Insurance App
 
+# Copy of My Insurance App repo in order to practice manual and automated testing 
+
 ## Install Dependencies
 - pip3 install -r requirements.txt
   - If you have old version of project: 
