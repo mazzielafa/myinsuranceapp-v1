@@ -8,7 +8,7 @@ pipeline {
                 git branch: 'deploy',url: 'https://github.com/mazzielafa/myinsuranceapp-v1.git'
             }
         }        
-        stage('Requirements') {
+        /*stage('Requirements') {
             steps {
                 echo 'Installing dependencies...'
                 sh 'pip3 install -r requirements.txt'
@@ -26,7 +26,7 @@ pipeline {
                 echo 'Acceptance...'
                 sh 'python3 -m unittest discover -s tests/acceptance-flask -v'
             }
-        }     
+        }   */  
         stage('Create image') {
             steps {
                 echo 'creating image...'    
