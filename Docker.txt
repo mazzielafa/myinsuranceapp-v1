@@ -80,3 +80,5 @@ ansible-playbook playbook-01.yml
 
 
 https://codeshare.io/loOyoB
+
+1842ba28-050d-47ec-b2bb-dc0ee7d97fac
