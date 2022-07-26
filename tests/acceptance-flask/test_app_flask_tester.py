@@ -6,6 +6,7 @@ from project import app
 class TestApp(unittest.TestCase):
     token=''
 
+<<<<<<< HEAD
     def test_1_get_user_products(self):
         # return None
         tester = app.test_client(self)        
@@ -16,4 +17,9 @@ class TestApp(unittest.TestCase):
         print(f"get_user_products: {data}")
         self.assertEqual(response.status_code, 200)       
         self.assertTrue(len(data)>0)
+=======
+    def test_get_user_products(self):
+        return None
+
+>>>>>>> develop
     
