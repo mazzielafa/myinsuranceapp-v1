@@ -36,7 +36,7 @@ pipeline {
         stage('Publish image') {
             steps {
                 echo 'pushing image..'              
-                withDockerRegistry([ credentialsId: "az-kube-credentials", url: "myinsapp.azurecr.io" ]) {
+                withDockerRegistry([ credentialsId: "az-kube-credentials", url: "https://myinsapp.azurecr.io" ]) {
                     sh 'docker push myinsapp.azurecr.io/myinsapp:v1'
                 }
             }
