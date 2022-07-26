@@ -1,0 +1,82 @@
+ssh ubuntu@54.90.118.73
+scp ubuntu@54.90.118.73:.kube/config k8-config
+
+Jenkins  54.90.118.73:8080
+Windows Webhook http://83.56.41.119:8088/github-webhook/
+Ubuntu Webhook http://54.90.118.73:8080/github-webhook/
+
+
+ssh -i id_rsa azureuser@40.121.1.62
+
+{
+  "appId": "a73c439c-dc91-4e26-9e6d-3052e4e4cab7",
+  "displayName": "azure-cli-2022-07-21-10-05-13",
+  "password": "j.s8Q~UPeOTSakT_AHEwj-g6v-zXrPdlOQzL2ct9",
+  "tenant": "9452b23e-fd00-40c5-98f7-d9a67ab13a7e"
+}
+
+Credentials
+az aks get-credentials --resource-group $(terraform output -raw resource_group_name) --name $(terraform output -raw kubernetes_cluster_name)
+
+{
+  "appId": "7fca5c05-67ee-4557-aa9a-992eb8883c74",
+  "displayName": "azure-cli-2022-07-21-11-50-06",
+  "password": "Eul8Q~.4aqKK0iANswluQVGbVWdGrSynoWUTjcO4",
+  "tenant": "9452b23e-fd00-40c5-98f7-d9a67ab13a7e"
+}
+
+RznV/6aBYJIdRrUIxtjyPifvSjtXWoZ5m5sLr9tj1klcZdky6PMrpvCygJgn1D3STO7uMWPd483G+AStIEeiBA==
+
+
+RznV/6aBYJIdRrUIxtjyPifvSjtXWoZ5m5sLr9tj1klcZdky6PMrpvCygJgn1D3STO7uMWPd483G+AStIEeiBA==
+
+sub id 8bdc8238-a4f4-47c8-99bc-b1ebd691962f
+client 7fca5c05-67ee-4557-aa9a-992eb8883c74
+ten 9452b23e-fd00-40c5-98f7-d9a67ab13a7e
+
+
+Ricardo--- # JENKINS TERRAFORM Pipeline
+## Credentials
+"subid": "be31b50a-f0ad-498f-b148-9d9032007b8e"
+"appId": "7cd595b6-b957-4553-9086-221cc713e392",
+"displayName": "terraform-jenkins",
+"password": "rK28Q~9WmPp1Z1mVqzt2s6dVKU4LitnzkKR6qcA.",
+"tenant": "8b85184d-f6f0-4ace-80dd-c3bda5a6c156"
+-------------------------------------------------------------------
+Kubernetes & Docker
+
+minikube start
+minikube status
+kubectl get pods
+kubectl get services
+nano nginx_deployment.yaml (to edit)
+kubectl apply -f + <name of the file>
+kubectl get all
+kubectl get all | grep nginx (to see the state)
+
+curl localhost:8080
+
+kill -9 (id)
+
+ kill -9  37419
+  581  docker ps
+  584  docker container stop c8f5b21c5d08
+  585  docker container stop a6e9d3f76f5d
+  586  docker container prune
+--------------------------------------------------------
+ansible ssh ubuntu@20.187.66.70
+
+[allianz]
+20.247.97.152
+
+
+[defaults]
+inventory = ~/workspace/ansible/hosts
+roles_path = ~/workspace/ansible/roles
+deprecation_warnings=False
+nocows = 1
+
+ansible-playbook playbook-01.yml
+
+
+https://codeshare.io/loOyoB
