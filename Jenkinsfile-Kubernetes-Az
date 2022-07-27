@@ -43,19 +43,19 @@ pipeline {
         }
         stage('Apply Kubernetes ') {
             steps {
-                withKubeConfig([credentialsId: 'az-kube-credential']) {   
+                withKubeConfig([credentialsId: 'k8-practice-credentials']) {   
                     sh 'kubectl apply -f kubernetes/3_ins_app_deployment_az.yaml'
                     sh 'kubectl apply -f kubernetes/4_ins_app_service_az.yaml'
-                    sh 'kubectl port-forward service/myinsuranceapp 5000:5000 &'
+                    sh 'kubectl port-forward service/myinsapp 5000:5000 &'
                 }
             }
         }
-        stage('External acceptance tests') {
-            steps{
-                echo 'External acceptance tests...'
-                sh 'python3 -m unittest discover -s tests/acceptance-request -v'
-            }
-        }
+        // stage('External acceptance tests') {
+        //     steps{
+        //         echo 'External acceptance tests...'
+        //         sh 'python3 -m unittest discover -s tests/acceptance-request -v'
+        //     }
+        // }
     }
     post {
         always {
